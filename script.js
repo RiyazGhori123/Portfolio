@@ -92,8 +92,10 @@ let menuIcon = document.querySelector("#menu-icon");
 let navlist = document.querySelector(".navlist");
 
 menuIcon.onclick = () => {
-    menuIcon.classList.toggle("bx-x");
+    // toggle visual state and aria attribute for accessibility
+    const nowOpen = menuIcon.classList.toggle("bx-x");
     navlist.classList.toggle("open");
+    menuIcon.setAttribute('aria-expanded', nowOpen ? 'true' : 'false');
 }
 
 window.onscroll = () => {
@@ -120,5 +122,53 @@ scrollBottom.forEach((el)=>observer.observe(el));
 
 const scrollTop = document.querySelectorAll(".scroll-top");
 scrollTop.forEach((el)=>observer.observe(el));
+
+// Tab switching functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabPanes = document.querySelectorAll('.tab-pane');
+    const tabIndicator = document.querySelector('.tab-indicator');
+
+    // Function to set indicator position
+    function setIndicatorPosition(button) {
+        const buttonRect = button.getBoundingClientRect();
+        const containerRect = button.parentElement.getBoundingClientRect();
+        tabIndicator.style.left = `${buttonRect.left - containerRect.left}px`;
+        tabIndicator.style.width = `${buttonRect.width}px`;
+    }
+
+    function switchTab(e) {
+        const targetTab = e.target.dataset.tab;
+        const targetPane = document.getElementById(targetTab);
+
+        // Update buttons
+        tabBtns.forEach(btn => btn.classList.remove('active'));
+        e.target.classList.add('active');
+
+        // Update content
+        tabPanes.forEach(pane => pane.classList.remove('active'));
+        targetPane.classList.add('active');
+
+        // Move indicator
+        setIndicatorPosition(e.target);
+    }
+
+    // Add click handlers
+    tabBtns.forEach(btn => btn.addEventListener('click', switchTab));
+
+    // Initialize indicator position
+    const activeBtn = document.querySelector('.tab-btn.active');
+    if (activeBtn) {
+        setIndicatorPosition(activeBtn);
+    }
+    
+    // Handle window resize
+    window.addEventListener('resize', () => {
+        const currentActive = document.querySelector('.tab-btn.active');
+        if (currentActive) {
+            setIndicatorPosition(currentActive);
+        }
+    });
+});
 
 

@@ -1,0 +1,113 @@
+/* Contact section responsiveness */
+.contact-info-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.contact-info-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+    align-items: start;
+}
+
+.contact-info-box {
+    background: var(--secon-bg-color);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.contact-info-box:hover {
+    transform: translateY(-5px);
+}
+
+.contact-icon {
+    font-size: 2rem;
+    color: var(--hover-color);
+}
+
+.contact-details {
+    flex: 1;
+}
+
+.contact-details h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.contact-details a,
+.contact-details p {
+    color: var(--text-color);
+    font-size: 1rem;
+    word-break: break-word;
+}
+
+/* Tablet Responsiveness */
+@media (max-width: 991px) {
+    .contact-info-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    .contact-info-box {
+        padding: 1.5rem;
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 576px) {
+    .contact-info-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .contact-info-box {
+        padding: 1.25rem;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .contact-icon {
+        font-size: 1.5rem;
+    }
+
+    .contact-details h3 {
+        font-size: 1.1rem;
+    }
+
+    .contact-details a,
+    .contact-details p {
+        font-size: 0.95rem;
+    }
+
+    .contact-info-wrapper {
+        padding: 1rem 0.5rem;
+    }
+}
+
+/* Additional fixes for extra small devices */
+@media (max-width: 360px) {
+    .contact-info-box {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .contact-details h3 {
+        font-size: 1rem;
+    }
+
+    .contact-details a,
+    .contact-details p {
+        font-size: 0.9rem;
+    }
+}

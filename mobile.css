@@ -1,0 +1,109 @@
+@media (max-width: 991px) {
+    #menu-icon {
+        display: inline-flex !important;
+    }
+    .navlist {
+        position: fixed;
+        top: -100vh;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background: var(--bg-color);
+        text-align: center;
+        transition: all .45s ease;
+        box-shadow: 0 4px 4px rgba(0,0,0,0.1);
+        padding: 1rem 0;
+        z-index: 1000;
+    }
+    .navlist.open {
+        top: 70px;
+    }
+    .navlist a {
+        display: block;
+        padding: 1rem;
+        margin: 0.5rem;
+        border-left: 2px solid transparent;
+    }
+    .home {
+        grid-template-columns: 1fr !important;
+        padding-top: 100px;
+        gap: 2rem;
+    }
+    .home-content {
+        order: 2;
+        text-align: center;
+    }
+    .home-image {
+        order: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 4rem 1rem !important;
+    }
+    .home-content h1 {
+        font-size: 2rem !important;
+    }
+    .home-image img {
+        width: 250px !important;
+        margin: 0 auto;
+    }
+    .btn-box {
+        flex-direction: column !important;
+        gap: 1rem;
+        height: auto;
+        width: 100% !important;
+    }
+    .btn-box .btn {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .skill-main {
+        grid-template-columns: 1fr !important;
+        gap: 2rem;
+    }
+    .service-box {
+        width: 100% !important;
+        margin: 1rem 0;
+    }
+    .portfolio-gallery {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem;
+    }
+    .filter-buttons {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-content h1 {
+        font-size: 1.8rem !important;
+    }
+    .btn-box .btn {
+        width: 100%;
+    }
+    .info-box {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+        width: 100% !important;
+    }
+    .social-icons {
+        width: 100%;
+        justify-content: center;
+        gap: 1rem;
+    }
+    .tab-navigation {
+        overflow-x: auto;
+        padding-bottom: 1rem;
+    }
+    .tab-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+        white-space: nowrap;
+    }
+}

@@ -6,11 +6,14 @@
     <title>Riyaz Ghori || Portfolio website</title>
     <link rel="website icon" href="./img/logo.jpg">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="contact-responsive.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <header>
-        <div class="logo"><span>R</span>iyaz.</div>
+  <header>
+    <div class="logo"><span>R</span>iyaz.</div>
         <ul class="navlist">
             <li><a href="#home"style="--i:1;">Home</a></li>
             <li><a href="#about"style="--i:2;">About</a></li>
@@ -19,12 +22,12 @@
             <li><a href="#projects"style="--i:5;">Projects</a></li>
             <li><a href="#contact"style="--i:6;">Contact</a></li>
         </ul>
-        <div id = "menu-icon" class="bx bx-menu"></div>
+    <div id = "menu-icon" class="bx bx-menu" role="button" aria-label="Toggle navigation" aria-expanded="false"></div>
     </header>
 
     <section id="home" class="home">
-        <div class="home-content scroll-scale">
-            <h1>Hi I'm Shaik Riyaz Ghori</h1>
+    <div class="home-content scroll-scale">
+      <h1>Hi, I'm Shaik Riyaz Ghori</h1>
             <div class="change-text">
                 <h3>I'm </h3>
                 <h3>
@@ -33,7 +36,7 @@
                     <span class="word">Web&nbsp; Developer</span>
                 </h3>
             </div>
-            <p>Welcome to my data-driven universe! I'm a 4th-year Data Science enthusiast and Master's student with a passion for deciphering the mysteries of data. Alongside my analytical prowess, I also wield the magic of MERN stack development, crafting captivating and seamless web experiences.Let's journey together into the realm of innovation and discovery! </p>
+      <p>Welcome — I'm a passionate Data Science student and MERN full-stack developer. I transform data into clear insights and build polished web experiences. If you need data-driven products or web apps, let's build something impactful together.</p>
             <br>
             <div class="info-box">
                 <div class="email-info">
@@ -42,11 +45,11 @@
                 </div>
             </div>
             <br>
-            <div class="btn-box">
-                <a href="#contact" class="btn">Hire Me <i class='bx bxs-chevrons-down' ></i></a>
-                <a href="#projects" class="btn">My Work<i class='bx bx-download' ></i></a>
-                <a href="./img/Shaik_Riyaz Ghori_Resume_.pdf" target="_blank" class="btn">Resume<i class='bx bx-download' ></i></a>
-            </div>
+      <div class="btn-box">
+        <a href="#contact" class="btn">Hire Me <i class='bx bxs-chevrons-down' ></i></a>
+        <a href="#projects" class="btn">Portfolio <i class='bx bx-briefcase' ></i></a>
+        <a href="./img/Shaik_Riyaz Ghori_Resume_.pdf" target="_blank" class="btn">Resume <i class='bx bx-download' ></i></a>
+      </div>
             <div class="social-icons">
                     <a href="https://www.instagram.com/_urstruly_riyaz/" target="_blank"><i class='bx bxl-instagram' ></i></a>
                     <a href="https://github.com/RiyazGhori123" target="_blank"><i class='bx bxl-github' ></i></a>
@@ -56,10 +59,10 @@
                   </div>  
              </div>     
 
-             <div class="home-image scroll-scale" >
-                <div class="img-box">
-                    <img src="img/about-me-pic2.png" alt="">
-                </div>    
+       <div class="home-image scroll-scale" >
+        <div class="img-box">
+          <img src="img/about-me-pic2.png" alt="Portrait of Shaik Riyaz Ghori">
+        </div>    
 
                 <div class="liquid-shape">
                     <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
@@ -127,15 +130,21 @@
               - #Education
             -->
             <div class="content-wrapper scroll-scale">
-              <div class="education-content">
-                <div class="title-wrapper">
-                  <h2 class="h2">Education</h2>
-                </div>
-      
-                <ol class="timeline-list">            
-                  <li class="timeline-item">
+              <!-- Tab Navigation -->
+              <div class="tab-navigation">
+                <button class="tab-btn active" data-tab="education">Education</button>
+                <button class="tab-btn" data-tab="experience">Experience</button>
+                <div class="tab-indicator"></div>
+              </div>
+
+              <!-- Tab Content -->
+              <div class="tabs-content">
+                <!-- Education Tab -->
+                <div class="education-content tab-pane active" id="education">
+                  <ol class="timeline-list">            
+                    <li class="timeline-item">
                       <div class="contact-info">
-                   <a href="https://niituniversity.in/" target="_blank" class="contact-link"><h3><b>NIIT University</b></h3></a>
+                        <a href="https://niituniversity.in/" target="_blank" class="contact-link"><h3><b>NIIT University</b></h3></a>
                       </div>
                       <span>2020 — 2024</span>
                       <p class="timeline-text">
@@ -169,16 +178,11 @@
                         <a href="./img/10th Me.pdf" target="_blank" class="contact-link" style="color: rgb(255, 255, 255);"><h4>Marks card</h4></a>
                       </p>  
                     </li>
-                </ol>
+                  </ol>
                 </div>
-<!-- Experience -->
-                <div class="experience-content">
-                <div class="title-wrapper">
-                  <!--  -->
-                  <h2 class="h3">Experience</h2>
-                </div>
-      
-                <ol class="timeline-list">
+                <!-- Experience Tab -->
+                <div class="experience-content tab-pane" id="experience">
+                  <ol class="timeline-list">
       
                   <li class="timeline-item">
       
@@ -536,21 +540,61 @@
 
       <section id="contact" class="contact">
         <div class="main-text scroll-scale">
-          <span>Ask me question</span>
+          <span>Let's Connect</span>
           <h2>Contact Me</h2>
         </div>
-      
-          <div class="scroll-scale">
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14434554.033428924!2d57.94443454999997!3d27.9614167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db6d381bd8a09%3A0x5cd01de55b1d2c65!2sNIIT%20University!5e0!3m2!1sen!2sin!4v1689339882377!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        <div class="contact-info-wrapper scroll-scale">
+          <div class="contact-info-scroller">
+            <div class="contact-info-container">
+              <div class="contact-info-box">
+                <i class='bx bx-envelope contact-icon'></i>
+                <div class="contact-details">
+                  <h3>Email</h3>
+                  <a href="mailto:riyazghori124@gmail.com">riyazghori124@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="contact-info-box">
+                <i class='bx bx-phone contact-icon'></i>
+                <div class="contact-details">
+                  <h3>Phone</h3>
+                  <a href="tel:+918008809572">+91 8008809572</a>
+                </div>
+              </div>
+
+              <div class="contact-info-box">
+                <i class='bx bxl-linkedin-square contact-icon'></i>
+                <div class="contact-details">
+                  <h3>LinkedIn</h3>
+                  <a href="https://www.linkedin.com/in/riyaz-ghori-shaik/" target="_blank">riyaz-ghori-shaik</a>
+                </div>
+              </div>
+
+              <div class="contact-info-box">
+                <i class='bx bxl-github contact-icon'></i>
+                <div class="contact-details">
+                  <h3>GitHub</h3>
+                  <a href="https://github.com/RiyazGhori123" target="_blank">RiyazGhori123</a>
+                </div>
+              </div>
+
+              <div class="contact-info-box">
+                <i class='bx bx-map contact-icon'></i>
+                <div class="contact-details">
+                  <h3>Location</h3>
+                  <p>NIIT University, Neemrana, Rajasthan</p>
+                </div>
+              </div>
             </div>
+          </div>
+        </div>
         
-        <form action="# " class="scroll-bottom">
-          <input type="text" placeholder="Your Name"> 
-          <input type="text" placeholder="Your Email"> 
-          <input type="text" placeholder="Your Address"> 
-          <input type="text" placeholder="Phone Number"> 
-          <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+        <form action="mailto:riyazghori124@gmail.com" method="POST" enctype="text/plain" class="scroll-bottom">
+          <input type="text" name="name" placeholder="Your Name" required> 
+          <input type="email" name="email" placeholder="Your Email" required> 
+          <input type="tel" name="phone" placeholder="Phone Number" pattern="[0-9]{10}"> 
+          <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
           <div class="btn-box formBtn">
             <button type="submit" class="btn">Send Message</button>
           </div>
