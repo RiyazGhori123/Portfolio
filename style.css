@@ -590,7 +590,7 @@ body {
     overflow-y: auto;
     padding: 3rem 2rem;
     transition: opacity 0.3s ease;
-    scrollbar-width: thin;
+    scrollbar-width: none;
     scrollbar-color: var(--hover-color) var(--bg-color);
 }
 

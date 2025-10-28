@@ -1,0 +1,52 @@
+/* Experience section list styles */
+.experience-content .timeline-text ul {
+    list-style: none !important;
+    margin: 1rem 0 !important;
+    padding-left: 1.5rem !important;
+}
+
+.experience-content .timeline-text ul li {
+    position: relative !important;
+    padding-left: 2rem !important;
+    margin-bottom: 1rem !important;
+    line-height: 1.6 !important;
+    color: var(--text-color) !important;
+}
+
+/* Create custom bullet points */
+.experience-content .timeline-text ul li::before {
+    content: "•" !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    color: #12f7ff !important;
+    font-size: 1.5rem !important;
+    line-height: 1.5 !important;
+}
+
+.experience-content .timeline-text ul li strong {
+    color: #12f7ff !important;
+    font-weight: 500 !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .timeline-text ul {
+        padding-left: 1.25rem;
+    }
+    
+    .timeline-text ul li {
+        margin-bottom: 0.5rem;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .timeline-text ul {
+        padding-left: 1rem;
+    }
+    
+    .timeline-text ul li {
+        font-size: 0.9rem;
+    }
+}
